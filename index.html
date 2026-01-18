@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rishi Raj - Dedicated Maths & History Educator | Bihar Board Specialist</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #667eea, #764ba2, #f093fb, #4facfe, #00f2fe);
+      background-size: 400% 400%;
+      animation: gradientShift 18s ease infinite;
+      color: #1e293b;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 15px;
+    }
+    @keyframes gradientShift {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    header { text-align:center; padding:60px 15px 40px; color:white; text-shadow:1px 1px 8px rgba(0,0,0,0.6); }
+    .tag { font-size:1.3em; color:#e0f2fe; opacity:0.97; letter-spacing:0.8px; }
+
+    .section {
+      background:rgba(255,255,255,0.28);
+      backdrop-filter:blur(18px);
+      border:1px solid rgba(255,255,255,0.35);
+      box-shadow:0 10px 40px rgba(0,0,0,0.28);
+      border-radius:24px;
+      padding:35px 25px;
+      margin:30px 12px;
+      width:100%;
+      max-width:920px;
+      text-align:center;
+      color:#0f172a;
+      transition:all 0.4s ease;
+      opacity:0;
+      transform:translateY(50px);
+    }
+    .section.visible { opacity:1; transform:translateY(0); }
+    .section:hover { transform:translateY(-10px) scale(1.012); }
+
+    h2 { font-size:2.1em; margin-bottom:20px; color:#1e293b; font-weight:700; }
+
+    .flow-gradient {
+      background: linear-gradient(270deg, #7c3aed, #c026d3, #e11d48, #a855f7, #7c3aed);
+      background-size: 400% 400%;
+      animation: flowGradient 6s ease infinite;
+      color: white;
+      text-decoration: none;
+      position: relative;
+      overflow: hidden;
+      z-index: 1;
+    }
+
+    .flow-gradient::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(90deg, rgba(255,255,255,0.28), rgba(255,255,255,0.12), rgba(255,255,255,0.28));
+      opacity: 0.75;
+      z-index: -1;
+    }
+
+    @keyframes flowGradient {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    .portfolio-link {
+      display: inline-block;
+      margin: 35px 0 25px;
+      padding: 16px 50px;
+      font-size: 1.32em;
+      font-weight: 700;
+      border-radius: 50px;
+      box-shadow: 0 10px 30px rgba(124,58,237,0.45);
+    }
+
+    .portfolio-link:hover {
+      transform: translateY(-8px) scale(1.06);
+      box-shadow: 0 20px 50px rgba(124,58,237,0.6);
+    }
+
+    .demos, .buttons {
+      display:flex;
+      flex-wrap:wrap;
+      justify-content:center;
+      gap:30px;
+      margin:40px 0;
+    }
+
+    .demo-box, .btn {
+      padding: 16px 45px;
+      font-size: 1.28em;
+      font-weight: 700;
+      border-radius: 50px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+    }
+
+    .demo-box:hover, .btn:hover {
+      transform: translateY(-10px) scale(1.07);
+    }
+
+    .about-content, .feature-list {
+      font-size: 1.12em;
+      line-height: 1.75;
+      max-width: 780px;
+      margin: 0 auto 25px;
+      text-align: left;
+    }
+
+    .highlight-line {
+      font-size: 1.25em;
+      font-weight: 600;
+      color: #6d28d9;
+      background: rgba(109,40,217,0.1);
+      padding: 6px 14px;
+      border-radius: 10px;
+      display: inline-block;
+      margin: 18px 0;
+    }
+
+    .feature-list {
+      padding-left: 0;
+    }
+
+    .feature-list li {
+      margin: 14px 0;
+      position: relative;
+      padding-left: 32px;
+    }
+
+    .feature-list li::before {
+      content: "✦";
+      position: absolute;
+      left: 0;
+      color: #8b5cf6;
+      font-size: 1.3em;
+    }
+
+    footer {
+      margin:100px 0 50px;
+      padding: 40px 15px;
+      width: 100%;
+      text-align: center;
+      color: white;
+      text-shadow:1px 1px 5px rgba(0,0,0,0.6);
+      font-size:1.1em;
+      background: linear-gradient(135deg, #0f172a, #1e293b, #334155);
+    }
+
+    @media (max-width:768px) {
+      h1 { font-size:2.4em; }
+      h2 { font-size:1.85em; }
+      .portfolio-link, .demo-box, .btn { 
+        padding:14px 40px; 
+        font-size:1.18em; 
+        width:100%;
+        max-width:380px;
+      }
+      .section { padding:28px 18px; margin:24px 10px; }
+      .about-content, .feature-list { font-size:1.05em; }
+    }
+
+    @media (max-width:480px) {
+      header { padding:50px 12px 35px; }
+      .tag { font-size:1.15em; }
+      h2 { font-size:1.7em; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <p class="tag">I'm Rishi</p>
+  </header>
+
+  <!-- Demo Materials – Moved UP -->
+  <div class="section">
+    <h2>📁 Demo Materials</h2>
+    <p style="font-size:1.18em; margin-bottom:30px;">Some of my previously prepared notes, PPTs, and question banks</p>
+    
+    <div class="demos">
+      <a href="https://drive.google.com/drive/folders/1v3V4DXs3JabXNtPaNiT32-QihcoOnqRo?usp=sharing" 
+         class="demo-box flow-gradient" target="_blank">📂 Open All Demo Files (Google Drive Folder)</a>
+    </div>
+
+    <p style="margin-top:35px; font-size:1.14em; font-weight:500;">
+      Sir, aap jaisa chahenge, bilkul waise hi bana dunga — 100% aapke direction ke according!
+    </p>
+  </div>
+
+  <!-- About & Commitment – Moved DOWN -->
+  <div class="section">
+    <h2>🌟 About Me & My Commitment</h2>
+    <div class="about-content">
+      <p style="font-weight:600; margin:28px 0 20px; font-size:1.25em;">What I can immediately deliver for your classes:</p>
+
+      <ul class="feature-list">
+        <li>Complete coverage of <strong>Class 10th & 12th</strong> — All Subjects (Bihar Board)</li>
+        <li>All <strong>Previous Year Questions</strong> (Objective + Subjective) with solutions</li>
+        <li>Official <strong>Bihar Board Model Papers</strong> — Last 5 Years (with analysis)</li>
+        <li><strong>Sent-up Examination Papers</strong> — Latest & Most Relevant</li>
+      </ul>
+    </div>
+
+    <a href="https://75raj.github.io/757/" target="_blank" class="portfolio-link flow-gradient">
+      View My Complete Portfolio →
+    </a>
+  </div>
+
+  <div class="section">
+    <h2>💡 My Key Skills & Strengths</h2>
+    <div style="font-size:1.12em; line-height:1.8; max-width:760px; margin:0 auto;">
+      <p>✅ Expert in creating well-structured, student-friendly notes & question banks</p>
+      <p>✅ Advanced skills in MS Word, PowerPoint, formatting & visual presentation</p>
+      <p>✅ Specialised in making professional YouTube-style PPTs</p>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>🌐 My Other Self-Made Projects</h2>
+    <p style="font-size:1.12em; margin-bottom:35px;">If you have a coaching website, I can help beautify it too!</p>
+    <div class="buttons">
+      <a href="https://75raj.github.io/Maths/" class="btn flow-gradient" target="_blank">🌐 Interactive Maths Learning Portal</a>
+      <a href="https://75rishi.github.io/MedievalHisLec1/" class="btn flow-gradient" target="_blank">🏛️ History Quiz & Timeline Explorer</a>
+    </div>
+  </div>
+
+  <footer>
+    © 2026 Rishi Raj • Made with ❤️ & Dedication in Bihar
+  </footer>
+
+  <script>
+    const sections = document.querySelectorAll('.section');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) entry.target.classList.add('visible');
+      });
+    }, { threshold: 0.15 });
+    sections.forEach(sec => observer.observe(sec));
+  </script>
+
+</body>
+</html>
